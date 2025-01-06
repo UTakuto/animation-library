@@ -2,13 +2,13 @@ CSS Animation Kit
 
 CSS Animation Kit is a collection of pre-built CSS and JavaScript animations that you can easily integrate into your web projects. This package includes various text and element animations, such as fade-in, slide-in, typing effects, and more.
 
-📦 Installation
+**📦 Installation**
 
 You can install the package using npm:
 
 npm i css-animation-kit
 
-🚀 Usage
+**🚀 Usage**
 
 After installing the package, you can use the animations by including the CSS and JavaScript files in your HTML:
 
@@ -63,7 +63,7 @@ For example:
 
 <div class="animation-box slide-in">This is a slide-in animation!</div>
 
-🎨 Available Animations
+**🎨 Available Animations**
 
 Basic Motions
 
@@ -101,11 +101,11 @@ hover-slide-in
 
 hover-rotate
 
-🛠️ Customization
+**🛠️ Customization**
 
 You can customize the animations by adjusting the CSS properties in animation.css or adding new keyframes.
 
-📋 License
+**📋 License**
 
 This project is licensed under the MIT License.
 
