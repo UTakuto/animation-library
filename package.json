@@ -1,0 +1,25 @@
+{
+  "name": "my-animation-package",
+  "version": "1.0.0",
+  "description": "A collection of CSS and JS animations",
+  "main": "js/script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UTakuto/animation-library.git"
+  },
+  "keywords": [
+    "css",
+    "js",
+    "animations",
+    "effects"
+  ],
+  "author": "UTakuto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UTakuto/animation-library/issues"
+  },
+  "homepage": "https://github.com/UTakuto/animation-library#readme"
+}
