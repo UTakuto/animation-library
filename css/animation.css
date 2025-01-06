@@ -1,0 +1,288 @@
+/* animations.css */
+
+/* Basic Motions */
+
+.fade-in:hover {
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.fade-out:hover {
+    animation: fadeOut 1s ease-out forwards;
+}
+
+.fade-in-out:hover {
+    animation: fadeInOut 2s ease-in-out infinite;
+}
+
+.slide-in:hover {
+    animation: slideIn 1s ease-in forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.slide-out:hover {
+    animation: slideOut 1s ease-out forwards;
+}
+
+/* Transform Animations */
+
+.scale-up:hover {
+    animation: scaleUp 1s ease-in-out forwards;
+}
+
+.scale-down:hover {
+    animation: scaleDown 1s ease-in-out forwards;
+}
+
+.flip-horizontal:hover {
+    animation: flipHorizontal 1s ease-in-out forwards;
+}
+
+.flip-vertical:hover {
+    animation: flipVertical 1s ease-in-out forwards;
+}
+
+/* Bounce and Shake */
+.bounce {
+    animation: bounce 1s infinite;
+}
+
+.shake {
+    animation: shake 0.5s infinite;
+}
+
+/* Call-to-Attention Animations */
+.flash {
+    animation: flash 1s infinite;
+}
+
+.pulse {
+    animation: pulse 1.5s infinite;
+}
+
+/* Hover Transitions */
+.hover-slide-in {
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.hover-slide-in:hover {
+    transform: translateX(0);
+}
+
+.hover-scale-up {
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover-scale-up:hover {
+    transform: scale(1.1);
+}
+
+.hover-rotate {
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover-rotate:hover {
+    transform: rotate(15deg);
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInOut {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* @keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+} */
+
+@keyframes slideOut {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes scaleDown {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+@keyframes flipHorizontal {
+    0% {
+        transform: rotateY(0);
+    }
+    100% {
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes flipVertical {
+    0% {
+        transform: rotateX(0);
+    }
+    100% {
+        transform: rotateX(180deg);
+    }
+}
+
+@keyframes bounce {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes shake {
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+@keyframes flash {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* typing text cursor 2 */
+.typing-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid transparent;
+}
+
+/* カーソルの点滅アニメーション */
+.typing-cursor {
+    display: inline-block;
+    margin-left: 2px;
+    animation: blink 0.8s steps(1) infinite;
+    color: #000;
+}
+
+/* テキストを徐々に表示 */
+.typing-text-cursor {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* 点滅アニメーション */
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Image Slide Animation */
+.image-slide img {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.image-slide img.visible {
+    opacity: 1;
+}
+
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    visibility: hidden; /* スクロール前は見えない */
+}
+
+.scroll-animation.show {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.click-animation {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.click-animation.active {
+    transform: scale(1.2) rotate(10deg);
+    /* background-color: #2ecc71; */
+}
